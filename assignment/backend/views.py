@@ -8,6 +8,7 @@ from .models import orders
 from django.core.exceptions import ValidationError
 from .forms import OrdersData
 from django.http import JsonResponse
+from django.core.validators import slug_re
 import os
 
 def export(request):
@@ -163,18 +164,18 @@ def data_upload(request):
                             }
                            ]
                     return JsonResponse(data,safe=False)
-                elif data[2] == validate_slug:
-                    column = 'Order Id'
-                    error = 'Value can contain only Numbers or underscore'
-                    data = [
-                            {
-                            'Column':column,
-                            'Data':data[7],
-                            # 'Cell':count,
-                            'Error':error
-                            }
-                           ]
-                    return JsonResponse(data,safe=False)
+                # elif slug_re(data[2]):
+                #     column = 'Order Id'
+                #     error = 'Value can contain only Numbers or underscore'
+                #     data = [
+                #             {
+                #             'Column':column,
+                #             'Data':data[7],
+                #             # 'Cell':count,
+                #             'Error':error
+                #             }
+                #            ]
+                #     return JsonResponse(data,safe=False)
 
                 else:
                 	print(data[1])
