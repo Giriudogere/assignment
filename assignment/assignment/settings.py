@@ -136,7 +136,7 @@ STATIC_URL = '/static/'
 
 import os
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'assignment.assignment.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'assignment.settings'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
