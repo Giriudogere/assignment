@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'backend',
+    'assignment.backend',
     'import_export',
     'rest_framework',
 ]
@@ -136,7 +136,7 @@ STATIC_URL = '/static/'
 
 import os
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'assignment.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'assignment.assignment.settings'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
