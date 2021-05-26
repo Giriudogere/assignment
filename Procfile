@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath assignment assignment.wsgi
+web: gunicorn --pythonpath assignment.assignment assignment.wsgi
