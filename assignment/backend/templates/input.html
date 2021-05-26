@@ -1,0 +1,36 @@
+<head>
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {background-color: #008CBA;} /* Blue */
+</style>
+</head>
+<body>
+<form color=black method="post" enctype="multipart/form-data">
+  <body style="background-color:powderblue;">
+   {% csrf_token %}
+   <left><h1>Upload .xlsx file to backend</h1></left>
+   <h4> A simple application to upload the values of .xlsx file to the backend database.</h4>
+   <UL>
+     <li> Click on choose file to select file</li>
+     <li> By default it will show only .xlsx files present in the folder</li>
+     <li> Once file is selected, click on upload button to upload the data to the backend db</li>
+     <li> Wait for the confirmation message once the upload is completed</li>
+     <li> To export sample data <a href='/export'>Click here</a></li>
+    </ul>
+  <left>
+    <h2> Please select the file to be uploaded</h2>
+   <h2><input type="file" accept=".xlsx" name="myfile" style= "color:blue" autofocus></h2>
+      <br>
+   <button class="button button2" type="submit">Upload</button>
+ </left>
+ </form>
